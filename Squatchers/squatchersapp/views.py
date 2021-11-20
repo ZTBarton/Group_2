@@ -10,7 +10,6 @@ def sightingsPageView(request) :
 def aboutPageView(request) :
     return render(request, 'squatchersapp/about.html')
 
-# this doesn't work right now
 def sightingDetailsPageView(request) :
     return render(request, 'squatchersapp/sightingdetails.html')
 

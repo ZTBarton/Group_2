@@ -9,3 +9,9 @@ urlpatterns = [
     path("report/", reportSightingPageView, name="report sighting"),   
     path("contact/", contactPageView, name="contact")
 ] 
+
+# DEFINED DJANGO FORMS FOR THIS PROJECT
+# Form to create (Report) a new sighting
+# Form to lookup a sighting by reporter, location, date, etc.
+# Form to update/revise that sighting
+# Form to delete a sighting
