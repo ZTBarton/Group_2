@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-#! Glenn is the coolest
 """Django's command-line utility for administrative tasks."""
 import os
 import sys

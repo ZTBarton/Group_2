@@ -1,16 +1,23 @@
+from django.shortcuts import render
 from django.http import HttpResponse
 
 def indexPageView(request) :
-    return HttpResponse('Home page')
+    return render(request, 'squatchersapp/index.html')
 
 def sightingsPageView(request) :
-    return HttpResponse('sightings database goes here')
+    return render(request, 'squatchersapp/sightings.html')
 
 def aboutPageView(request) :
-    return HttpResponse('about us goes here')
+    return render(request, 'squatchersapp/about.html')
 
-def sightingDetailsPageView(request, sighting_id) :
-    return HttpResponse('sighting details for sighting ' + str(sighting_id) + ' go here')
+# this doesn't work right now
+def sightingDetailsPageView(request) :
+    return render(request, 'squatchersapp/sightingdetails.html')
 
 def reportSightingPageView(request) :
-    return HttpResponse('This is where you can report a sighting')
+    return render(request, 'squatchersapp/reportsighting.html')
+
+def contactPageView(request) :
+    return render(request, 'squatchersapp/contact.html')
+
+
