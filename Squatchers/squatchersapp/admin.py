@@ -1,3 +1,6 @@
 from django.contrib import admin
-
-# Register your models here.
+from .models import Reporter, Sighting
+        
+         # Register your models here.
+admin.site.register(Reporter)
+admin.site.register(Sighting) 
