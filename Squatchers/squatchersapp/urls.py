@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import aboutPageView, contactPageView, indexPageView, reportSightingPageView, sightingDetailsPageView, sightingsPageView, editSightingPageView, DeleteSightingPageView
+from .views import aboutPageView, contactPageView, indexPageView, reportSightingPageView, sightingDetailsPageView, sightingsPageView, editSightingPageView, DeleteSightingPageView, updateSighting, createSighting
 
 urlpatterns = [
     path("", indexPageView, name="index"),
@@ -9,7 +9,9 @@ urlpatterns = [
     path("report/", reportSightingPageView, name="report sighting"),   
     path("contact/", contactPageView, name="contact"),
     path("edit/<int:id>", editSightingPageView, name="edit"),
-    path("delete/<int:id>", DeleteSightingPageView, name="delete")
+    path("delete/<int:id>", DeleteSightingPageView, name="delete"),
+    path("update/", updateSighting, name="update"),
+    path("create/", createSighting, name="create")
 ] 
 
 # DEFINED DJANGO FORMS FOR THIS PROJECT

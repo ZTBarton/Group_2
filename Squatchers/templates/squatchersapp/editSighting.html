@@ -12,61 +12,56 @@
 
         <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
             <div class="col-lg-6">
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- * * SB Forms Contact Form * *-->
-                <!-- * * * * * * * * * * * * * * *-->
-                <!-- This form is pre-integrated with SB Forms.-->
-                <!-- To make this form functional, sign up at-->
-                <!-- https://startbootstrap.com/solution/contact-forms-->
-                <!-- to get an API token!-->
-                <form id="editForm" data-sb-form-api-token="API_TOKEN">
-                    <!-- Name input-->
+                <form id="editForm" method="post" action="{% url 'update' %}">
+                    {% csrf_token %}
+                        <input class="form-control" id="id" name="id" type="hidden" value='{{ sighting.id }}' />
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="title" type="text" placeholder="Enter your name..." data-sb-validations="required" value='{{ sighting.sight_title }}' />
+                        <input class="form-control" id="title" name="title" type="text" placeholder="Enter a title..." data-sb-validations="required" value='{{ sighting.sight_title }}' maxlength="100" />
                         <label for="title">Sighting Title</label>
                         <div class="invalid-feedback" data-sb-feedback="name:required">A title is required.</div>
                     </div>
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="description" type="text" placeholder="Enter a description here..." style="height: 10rem" data-sb-validations="required" value='{{ sighting.Description }}'></input>
+                        <textarea class="form-control" id="description" name="description" type="text" placeholder="Enter a description here..." style="height: 10rem" data-sb-validations="required" maxlength="5000">{{ sighting.Description }}</textarea>
                         <label for="description">Description</label>
                         <div class="invalid-feedback" data-sb-feedback="description:required">A description is required.</div>
                     </div>
-                    <!-- Email address input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                        <label for="email">Email address</label>
-                        <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                        <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                        <input class="form-control" id="latitude" name="latitude" type="decimal" placeholder="Enter latitude..." data-sb-validations="required" value='{{ sighting.sight_latitude }}' maxlength="10"/>
+                        <label for="latitude">Latitude</label>
+                        <div class="invalid-feedback" data-sb-feedback="latitude:required">A latitude is required.</div>
                     </div>
-                    <!-- Phone number input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                        <label for="phone">Phone number</label>
-                        <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                        <input class="form-control" id="longitude" name="longitude" type="decimal" placeholder="Enter longitude..." data-sb-validations="required" value='{{ sighting.sight_longitude }}' maxlength="10" />
+                        <label for="longitude">Longitude</label>
+                        <div class="invalid-feedback" data-sb-feedback="longitude:required">A longitude is required.</div>
                     </div>
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                        </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="date" name="date" type="date" data-sb-validations="required" value='{{ date }}' />
+                        <label for="date">Date</label>
+                        <div class="invalid-feedback" data-sb-feedback="date:required">A date is required.</div>
                     </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Submit</button></div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="time" name="time" type="time" data-sb-validations="required" value='{{ time }}' />
+                        <label for="time">Time</label>
+                        <div class="invalid-feedback" data-sb-feedback="time:required">A time is required.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="timezone" name="timezone" type="timezone" placeholder="Enter time zone..." data-sb-validations="required" value='{{ sighting.time_zone }}' maxlength="4"/>
+                        <label for="timezone">Time Zone</label>
+                        <div class="invalid-feedback" data-sb-feedback="zone:required">A time zone is required.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="country" name="country" type="text" placeholder="Enter country..." data-sb-validations="required" value='{{ sighting.Country }}' maxlength="50" />
+                        <label for="country">Country</label>
+                        <div class="invalid-feedback" data-sb-feedback="country:required">A country is required.</div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="state" name="state" type="text" placeholder="Enter state..." data-sb-validations="required" value='{{ sighting.State }}' maxlength="2"/>
+                        <label for="state">State</label>
+                        <div class="invalid-feedback" data-sb-feedback="state:required">A state is required.</div>
+                    </div>
+                    <div class="d-grid"><button class="btn btn-primary btn-xl" id="submitButton" type="submit">Update</button></div>
                 </form>
-            </div>
-        </div>
-      
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                <div>+1 (555) 123-4567</div>
             </div>
         </div>
     </div>

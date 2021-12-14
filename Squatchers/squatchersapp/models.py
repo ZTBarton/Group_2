@@ -22,9 +22,10 @@ class Reporter(models.Model):
 class Sighting(models.Model):
     reporter = models.ForeignKey(Reporter, on_delete=models.CASCADE)
     sight_title = models.CharField(max_length=100, blank=True)
-    sight_latitude = models.CharField(max_length=10)
-    sight_longitude = models.CharField(max_length=10)
-    Time_date = models.DateTimeField(default=datetime.today)
+    sight_latitude = models.DecimalField(max_digits = 10, decimal_places = 7)
+    sight_longitude = models.DecimalField(max_digits = 10, decimal_places = 7)
+    sight_date = models.DateField(default='2000-01-01')
+    sight_time = models.TimeField(default='00:00:00')
     time_zone = models.CharField(max_length=4, blank=True)
     Country = models.CharField(max_length=50)
     State = models.CharField(max_length=2)
@@ -32,7 +33,7 @@ class Sighting(models.Model):
     Description = TextField(max_length=5000)
     
     def __str__(self):
-        return (self.Description) 
+        return (self.sight_title) 
 
     def save(self):
         self.Country = self.Country.upper()

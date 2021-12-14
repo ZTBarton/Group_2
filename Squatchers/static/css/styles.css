@@ -602,6 +602,7 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  background-repeat: no-repeat;
 }
 
 .img-thumbnail {
@@ -1376,7 +1377,6 @@ progress {
   .col-lg-3 {
     flex: 0 0 auto;
     width: 25%;
-    text-decoration: none;
   }
 
   .col-lg-4 {
@@ -7496,6 +7496,7 @@ textarea.form-control-lg {
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+  
 }
 
 .pt-0 {
@@ -7841,6 +7842,7 @@ textarea.form-control-lg {
 .bg-light {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+}
 
 .bg-dark {
   --bs-bg-opacity: 1;
@@ -11329,7 +11331,7 @@ hr.divider-light {
 
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  background-color: #fff;
+  background-color: black !important;
   transition: background-color 0.2s ease;
 }
 #mainNav .navbar-brand {
@@ -11353,7 +11355,9 @@ hr.divider-light {
 @media (min-width: 992px) {
   #mainNav {
     box-shadow: none;
-    background-color: transparent;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   #mainNav .navbar-brand {
     color: rgba(255, 255, 255, 0.7);
@@ -11376,28 +11380,29 @@ hr.divider-light {
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #212529;
+    color: #B6BAB8;
   }
   #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #f4623a;
+    color: #B6BAB8;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link {
-    color: #212529;
+    color: #B6BAB8;
   }
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #B6BAB8;
   }
 }
 
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
-  background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
+
+
 header.masthead h1, header.masthead .h1 {
   font-size: 2.25rem;
 }

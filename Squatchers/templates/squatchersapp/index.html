@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<header class="masthead">
-    <div class="container px-4 px-lg-5 h-100">
+<header class="masthead" style="background-image: url('https://images.pexels.com/photos/1671324/pexels-photo-1671324.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')" >
+    <div class="container px-4 px-lg-5 h-100" >
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-8 align-self-end">
-                <h1 class="text-white font-weight-bold">Seen sasquatch?</h1>
+                <h1 class="text-white font-weight-bold">Seen Sasquatch?</h1>
                 <hr class="divider" />
             </div>
             <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 mb-5">Join squatchers today.</p>
+                <p class="text-white-75 mb-5">Join squatchers today!</p>
                 <a class="btn btn-primary btn-xl" href="{% url 'sightings' %}">View Sightings</a>
             </div>
         </div>
@@ -18,9 +18,9 @@
 <!-- About-->
 
 <!-- Services-->
-<section class="page-section" id="services">
+<section class="page-section" id="services" style="background-color:white">
     <div class="container px-4 px-lg-5">
-        <h2 class="text-center mt-0">At Your Service</h2>
+        <h2 class="text-center mt-0">Additional Squatchsources</h2>
         <hr class="divider"/>
         <div class="row gx-4 gx-lg-5">
             <div class="col-lg-3 col-md-6 text-center">
@@ -33,7 +33,7 @@
                     </div>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
-                <a href="https://www.britannica.com/topic/Sasquatch" target='_blank'>
+                <a href="https://www.britannica.com/topic/img/portfolio/thumbnailsuatch" target='_blank'>
                 <div class="mt-5">
                     <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
                     <h3 class="h4 mb-2">Get Educated!</h3>
@@ -51,10 +51,11 @@
             </a>
             </div>
             <div class="col-lg-3 col-md-6 text-center">
+                <a href="https://gatherupevents.com/smoky-mountain-bigfoot-conference/" target='_blank'>
                 <div class="mt-5">
-                    <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2"></h3>
-                    <p class="text-muted mb-0">Is it really open source if it's not made with love?</p>
+                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Smoky Mountain Bigfoot Conference</h3>
+                    <p class="text-muted mb-0">Click Here for More Informations</p>
                 </div>
             </div>
         </div>
@@ -65,35 +66,35 @@
     <div class="container-fluid p-0">
         <div class="row g-0">
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{% static 'img/img/portfolio/fullsize/1.jpg' %}" title="Project Name">
-                    <img class="img-fluid" src="{% static 'img/img/Num1.jpeg' %}" alt="..." />
+                <a class="portfolio-box" href="https://images.pexels.com/photos/4075/nature-walking-animal-strong.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500" title="Figurine">
+                    <img class="img-fluid" src="https://images.pexels.com/photos/4075/nature-walking-animal-strong.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500">
                     <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+                        <div class="project-category text-white-50">Figurine</div>
+                       
                     </div>
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{% static 'img/img/portfolio/fullsize/2.jpg' %}" title="Project Name">
-                    <img class="img-fluid" src="{% static 'img/img/Num2.jpeg' %}" alt="..." />
+                <a class="portfolio-box" href="https://nypost.com/wp-content/uploads/sites/2/2021/04/bigfoot.jpg?quality=90&strip=all&w=1488" title="Sasquatch Lurking">
+                    <img class="img-fluid" src="https://nypost.com/wp-content/uploads/sites/2/2021/04/bigfoot.jpg?quality=90&strip=all&w=1488" alt="..." />
                     <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+                        <div class="project-category text-white-50">Sasquatch Lurking</div>
+                        
                     </div>
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{% static 'img/img/portfolio/fullsize/3.jpg' %}" title="Project Name">
-                    <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/Num3.jpeg' %}" alt="..." />
+                <a class="portfolio-box" href="https://thumbs.dreamstime.com/b/bigfoot-mold-sand-44600862.jpg" title="Bigfoot Footprint in Sand">
+                    <img class="img-fluid" src="https://thumbs.dreamstime.com/b/bigfoot-mold-sand-44600862.jpg" alt="..." />
                     <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+                        <div class="project-category text-white-50">Bigfoot Footprint in Sand</div>
+                        
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            {% comment %} <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/4.jpg' %}" title="Project Name">
-                    <img class="img-fluid" src="{% static 'img/portfolio/thumbnails/Num4.jpeg' %}" alt="..." />
+                    <img class="img-fluid" src="{% static 'img/img/portfolio/thumbnails/Num4.png' %}" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
@@ -102,20 +103,20 @@
             </div>
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box" href="{% static 'img/img/portfolio/fullsize/5.jpg' %}" title="Project Name">
-                    <img class="img-fluid" src="{% static 'img/portfolio/Num5.jpeg' %}" alt="..." />
+                    <img class="img-fluid" src="{% static 'img/img/portfolio/thumbnails/Num5.png' %}" alt="..." />
                     <div class="portfolio-box-caption">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
+            <div class="col-lg-4 col-sm-6" >
                 <a class="portfolio-box" href="{% static 'img/portfolio/fullsize/6.jpg' %}" title="Project Name">
-                    <img class="img-fluid" src="{% static 'img/portfolio/Num6.jpeg' %}" alt="..." />
+                    <img class="img-fluid" src="{% static 'img/img/portfolio/thumbnails/num6.jpg' %}" alt="..." />
                     <div class="portfolio-box-caption p-3">
                         <div class="project-category text-white-50">Category</div>
                         <div class="project-name">Project Name</div>
-                    </div>
+                    </div> {% endcomment %}
                 </a>
             </div>
         </div>
@@ -123,15 +124,6 @@
 </div>
 
 
-
 {% endblock %}
 
 
-
-<!-- Call to action-->
-<!-- <section class="page-section bg-dark text-white">
-    <div class="container px-4 px-lg-5 text-center">
-        <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
-        <a class="btn btn-light btn-xl" href="https://startbootstrap.com/theme/creative/">Download Now!</a>
-    </div>
-</section> -->

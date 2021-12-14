@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div style="display:flex; justify-content:center; width:100vh; margin-right:0; padding-left:50rem">
-        <div style="width:fit-content; background-color:#ffffff; border-radius:.5rem">
-            <table style="margin:3rem">
+    <div style="display:flex; width:95%;" >
+        <div style="background-color:#ffffff; border-radius:.5rem; margin-right:160px; margin-top:100px">
+            <table style="margin:3rem; margin-right:50px">
                 <tr>
                     <th style="padding-right:3rem;">-</th>
                     <th style="padding-right:3rem;">Title</th>
@@ -23,8 +23,8 @@
                     <td style="padding-right:3rem;">{{sighting.Description}}</td>
                     <td style="padding-right:3rem;">{{sighting.sight_latitude}}</td>
                     <td style="padding-right:3rem;">{{sighting.sight_longitude}}</td>
-                    <td style="padding-right:3rem;">{{sighting.Time_date|date:'m-d-Y'}}</td>
-                    <td style="padding-right:3rem;">{{sighting.Time_date|date:'H:i'}}</td>
+                    <td style="padding-right:3rem;">{{sighting.sight_date}}</td>
+                    <td style="padding-right:3rem;">{{sighting.sight_time}}</td>
                     <td style="padding-right:3rem;">{{sighting.time_zone}}</td>
                     <td style="padding-right:3rem;">{{sighting.Country}}</td>
                     <td style="padding-right:3rem;">{{sighting.State}}</td>
